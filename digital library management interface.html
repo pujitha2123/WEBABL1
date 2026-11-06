@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Library Management</title>
+<style>
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    margin: 20px;
+}
+header {
+    background: darkgreen;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+input, select {
+    padding: 10px;
+    margin: 10px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.card {
+    background: white;
+    padding: 15px;
+    border: 1px solid gray;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+button {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Digital Library Management System</h1>
+<p>Welcome to Our Digital Library</p>
+</header>
+
+<h2>Search Books</h2>
+<input type="text" placeholder="Search book title">
+<select>
+<option>All Categories</option>
+<option>Programming</option>
+<option>Science</option>
+<option>Fiction</option>
+</select>
+<button>Search</button>
+
+<h2>Book Categories</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Python Programming</h3>
+<p>Author: Mark Lutz</p>
+<p>Category: Programming</p>
+<p>Availability: Available</p>
+<button>Borrow Book</button>
+</div>
+
+<div class="card">
+<h3>Data Structures</h3>
+<p>Author: Seymour Lipschutz</p>
+<p>Category: Computer Science</p>
+<p>Availability: Available</p>
+<button>Borrow Book</button>
+</div>
+
+<div class="card">
+<h3>Computer Networks</h3>
+<p>Author: Andrew Tanenbaum</p>
+<p>Category: Technology</p>
+<p>Availability: Not Available</p>
+<button>View Details</button>
+</div>
+
+</div>
+
+<h2>Library Book Catalog</h2>
+<table>
+<tr>
+<th>Book Name</th>
+<th>Author</th>
+<th>Category</th>
+<th>Status</th>
+</tr>
+<tr>
+<td>Python Programming</td>
+<td>Mark Lutz</td>
+<td>Programming</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Data Structures</td>
+<td>Seymour Lipschutz</td>
+<td>Computer Science</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Computer Networks</td>
+<td>Andrew Tanenbaum</td>
+<td>Technology</td>
+<td>Not Available</td>
+</tr>
+</table>
+
+<h2>Library Rules</h2>
+<ul>
+<li>Return books within 14 days.</li>
+<li>Maintain library silence.</li>
+<li>Do not damage books.</li>
+<li>Late returns may have a fine.</li>
+</ul>
+
+</body>
+</html>

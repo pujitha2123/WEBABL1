@@ -1,0 +1,289 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electronics Store</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f5f9;
+        }
+
+        header {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #2563eb;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .banner {
+            background-color: #dbeafe;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #172554;
+        }
+
+        .filters {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .filters button {
+            padding: 10px 18px;
+            margin: 5px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #bbb;
+        }
+
+        .card img {
+            width: 150px;
+            height: 130px;
+            object-fit: contain;
+        }
+
+        .discount {
+            color: red;
+            font-weight: bold;
+        }
+
+        .price {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card button {
+            background-color: #172554;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>WELCOME TO ELECTRONICS STORE</h1>
+    <p>Your One-Stop Shop for Electronics</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="banner" id="home">
+    <h2>Big Electronics Sale!</h2>
+    <p>Get up to 30% discount on selected products.</p>
+</section>
+
+<h2>Product Categories</h2>
+
+<div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('laptop')">Laptops</button>
+    <button onclick="filterProducts('mobile')">Smartphones</button>
+    <button onclick="filterProducts('accessory')">Accessories</button>
+    <button onclick="filterProducts('smart')">Smart Devices</button>
+</div>
+
+<h2 id="products">Our Products</h2>
+
+<div class="products">
+
+    <div class="card" data-category="laptop">
+        <img src="https://placehold.co/150x130?text=Laptop"
+             alt="Laptop">
+        <h3>HP Laptop</h3>
+        <p>Intel Core i5, 8GB RAM, 512GB SSD</p>
+        <p class="discount">20% OFF</p>
+        <p class="price">₹55,000</p>
+        <button onclick="showDetails('HP Laptop','Intel Core i5, 8GB RAM, 512GB SSD')">View Details</button>
+    </div>
+
+    <div class="card" data-category="mobile">
+        <img src="https://placehold.co/150x130?text=Smartphone"
+             alt="Smartphone">
+        <h3>Samsung Smartphone</h3>
+        <p>128GB Storage, 8GB RAM</p>
+        <p class="discount">15% OFF</p>
+        <p class="price">₹25,000</p>
+        <button onclick="showDetails('Samsung Smartphone','128GB Storage, 8GB RAM')">View Details</button>
+    </div>
+
+    <div class="card" data-category="accessory">
+        <img src="https://placehold.co/150x130?text=Headphones"
+             alt="Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>Bluetooth, Noise Cancellation</p>
+        <p class="discount">10% OFF</p>
+        <p class="price">₹2,500</p>
+        <button onclick="showDetails('Wireless Headphones','Bluetooth, Noise Cancellation')">View Details</button>
+    </div>
+
+    <div class="card" data-category="smart">
+        <img src="https://placehold.co/150x130?text=Smartwatch"
+             alt="Smartwatch">
+        <h3>Smart Watch</h3>
+        <p>Heart Rate Monitor, Fitness Tracking</p>
+        <p class="discount">25% OFF</p>
+        <p class="price">₹3,000</p>
+        <button onclick="showDetails('Smart Watch','Heart Rate Monitor, Fitness Tracking')">View Details</button>
+    </div>
+
+</div>
+
+<h2 id="comparison">Product Comparison Table</h2>
+
+<table>
+    <tr>
+        <th>Product</th>
+        <th>RAM</th>
+        <th>Storage</th>
+        <th>Price</th>
+    </tr>
+
+    <tr>
+        <td>HP Laptop</td>
+        <td>8GB</td>
+        <td>512GB SSD</td>
+        <td>₹55,000</td>
+    </tr>
+
+    <tr>
+        <td>Samsung Smartphone</td>
+        <td>8GB</td>
+        <td>128GB</td>
+        <td>₹25,000</td>
+    </tr>
+
+    <tr>
+        <td>Wireless Headphones</td>
+        <td>-</td>
+        <td>Bluetooth</td>
+        <td>₹2,500</td>
+    </tr>
+
+    <tr>
+        <td>Smart Watch</td>
+        <td>-</td>
+        <td>Fitness Tracking</td>
+        <td>₹3,000</td>
+    </tr>
+</table>
+
+<h2>Product Details</h2>
+
+<div id="details" style="text-align:center; padding:20px;">
+    Select a product to view its details.
+</div>
+
+<footer id="contact">
+    <h3>Electronics Store</h3>
+    <p>Email: electronicsstore@gmail.com</p>
+    <p>Contact: 9876543210</p>
+    <p>© 2026 Electronics Store. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+function filterProducts(category) {
+
+    let products = document.querySelectorAll(".card");
+
+    products.forEach(function(product) {
+
+        if (category === "all" ||
+            product.dataset.category === category) {
+
+            product.style.display = "block";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+function showDetails(name, specifications) {
+
+    document.getElementById("details").innerHTML =
+        "<h3>" + name + "</h3>" +
+        "<p>Specifications: " + specifications + "</p>";
+
+}
+
+</script>
+
+</body>
+</html>
+```

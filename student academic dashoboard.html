@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Academic Dashboard</title>
+<style>
+body {
+    font-family: Arial;
+    background: #eef2f7;
+    margin: 0;
+}
+header {
+    background: navy;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+aside {
+    background: #dbeafe;
+    padding: 20px;
+}
+main {
+    background: white;
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+.card {
+    background: #e0f2fe;
+    padding: 15px;
+    margin: 10px 0;
+}
+progress {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Student Academic Dashboard</h1>
+</header>
+
+<div class="container">
+<aside>
+<h3>Menu</h3>
+<p>Student Details</p>
+<p>Results</p>
+<p>Attendance</p>
+<p>Exams</p>
+<p>Announcements</p>
+</aside>
+
+<main>
+<h2>Student Details</h2>
+<div class="card">
+Name: Rahul Kumar<br>
+Roll No: 101<br>
+Department: CSE<br>
+Semester: 1
+</div>
+
+<h2>Semester Results</h2>
+<table>
+<tr><th>Subject</th><th>Marks</th></tr>
+<tr><td>Python</td><td>85</td></tr>
+<tr><td>Mathematics</td><td>90</td></tr>
+<tr><td>English</td><td>80</td></tr>
+</table>
+
+<h2>Attendance</h2>
+<p>Python - 90%</p>
+<progress value="90" max="100"></progress>
+<p>Mathematics - 85%</p>
+<progress value="85" max="100"></progress>
+
+<h2>Examination Schedule</h2>
+<p>Python - 10 December</p>
+<p>Mathematics - 12 December</p>
+
+<h2>Announcements</h2>
+<div class="card">
+Semester examinations begin next month.
+</div>
+
+</main>
+</div>
+</body>
+</html>
